@@ -1,11 +1,11 @@
-# BreadButter Project
+# Creator Job Hunting Project
 
 This is a React + TypeScript web app inspired by Behance and Upwork, where creators, developers, and professionals can look for jobs and sell their work or services.
 
 ## Features
 
 - Top bar navigation: Home, Services, Jobs, Marketplace, Profile
-- Clean layout using normal CSS (no Tailwind CSS)
+- Clean layout using normal CSS (upgrading to Tailwind CSS)
 
 ## Getting Started
 
@@ -21,8 +21,6 @@ This is a React + TypeScript web app inspired by Behance and Upwork, where creat
 Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
 
 ---
-
-Feel free to expand the layout and add more features!
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 

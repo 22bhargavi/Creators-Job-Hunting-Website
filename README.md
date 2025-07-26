@@ -18,7 +18,7 @@ This is a React + TypeScript web app inspired by Behance and Upwork, where creat
    npm run dev
    ```
 
-Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
+Open https://creator-job-hunt.netlify.app/ to view the app in your browser (Hosted on Netlify)
 
 ---
 

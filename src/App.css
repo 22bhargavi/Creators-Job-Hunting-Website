@@ -1,3 +1,9 @@
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -18,7 +24,12 @@ body {
   justify-content: space-between;
   background: #432167;
   /* color: #fff; */
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -30,6 +41,7 @@ body {
 
 .content p {
   font-size: 2rem;
+  margin-top: 20px;
 }
 .nav-bar button {
   background: none;
@@ -48,14 +60,17 @@ body {
 
 .content {
   flex: 1;
-  padding: 3.5rem;
+  padding: 2rem;
   max-width: 960px;
-  margin: 5rem auto;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   text-align: center;
   color: #71498e;
+  box-sizing: border-box;
 }
 .categories {
   margin-top: 1rem;
@@ -83,6 +98,9 @@ body {
   margin-bottom: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
+  white-space: nowrap;
+  max-width: 400px;
+  text-align: center;
 }
 
 .category-list span:hover {
@@ -97,4 +115,75 @@ body {
 }
 .footer-links {
   color: white;
+}
+
+/* ---------- Mobile & Small Screen Responsiveness ---------- */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-bar button {
+    margin-left: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .content {
+    margin: 80px 10px 20px 10px;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .category-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .category-list span {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    flex: 1 1 45%;
+    max-width: 400px;
+    min-width: 350px;
+  }
+}
+
+/* Even smaller screens (phones < 480px) */
+@media (max-width: 480px) {
+  .logo-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-list span {
+    flex: 1 1 100%;
+    font-size: 0.85rem;
+    padding: 0.6rem 0.7rem;
+  }
 }

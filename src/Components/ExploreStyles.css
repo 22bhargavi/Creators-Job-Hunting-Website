@@ -1,9 +1,12 @@
 .explore-container {
-  width: 80%; /* Or any fixed width like 900px */
-  padding: 2rem;
-  max-height: 80vh;
+  width: 80%;
+  padding: 0.5rem;
+  min-height: calc(100vh - 80px);
+  height: auto;
   margin-left: 200px;
+  margin-top: 65px;
   text-align: center;
+  position: relative;
   background-color: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
@@ -33,6 +36,7 @@
   width: 180px;
   background: #fff;
   border-radius: 12px;
+  max-height: 280px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -66,4 +70,62 @@
   margin-top: 6px;
   display: flex;
   justify-content: space-between;
+}
+
+/* ---------- Responsive Design for Explore Page ---------- */
+@media (max-width: 1024px) {
+  .explore-container {
+    width: 95%;
+    margin: 80px auto 0 auto;
+    padding: 1rem;
+  }
+
+  .project-card {
+    width: 45%; /* 2 cards per row */
+  }
+}
+@media (max-width: 768px) {
+  .explore-container {
+    width: 90%;
+    margin: 80px auto 0 auto;
+    padding: 1rem;
+  }
+
+  .cards-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .project-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .stats {
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 4px;
+  }
 }
